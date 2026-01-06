@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>技术支持 - FreshDay</title>
+    <style>
+        :root {
+            --primary-color: #34C759;
+            --primary-light: #4CD964;
+            --text-primary: #1C1C1E;
+            --text-secondary: #8E8E93;
+            --text-tertiary: #AEAEB2;
+            --background: #F2F2F7;
+            --card-background: #FFFFFF;
+            --border-color: #E5E5EA;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #FFFFFF;
+                --text-secondary: #8E8E93;
+                --text-tertiary: #636366;
+                --background: #000000;
+                --card-background: #1C1C1E;
+                --border-color: #38383A;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 16px;
+            padding-bottom: 60px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+            padding-top: 20px;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 36px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .section {
+            background: var(--card-background);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .section-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
+        .section-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        
+        /* FAQ 折叠样式 */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            padding: 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .faq-question:hover {
+            background: var(--background);
+        }
+        
+        .faq-question span {
+            font-size: 15px;
+            font-weight: 500;
+            flex: 1;
+            padding-right: 12px;
+        }
+        
+        .faq-arrow {
+            color: var(--text-tertiary);
+            transition: transform 0.3s ease;
+            font-size: 12px;
+        }
+        
+        .faq-item.active .faq-arrow {
+            transform: rotate(90deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--background);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-answer-content {
+            padding: 14px 16px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        /* 功能指南 */
+        .guide-item {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .guide-item:last-child {
+            border-bottom: none;
+        }
+        
+        .guide-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .guide-title .emoji {
+            font-size: 18px;
+        }
+        
+        .guide-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* 联系方式 */
+        .contact-item {
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-item:hover {
+            background: var(--background);
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-label {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .contact-value {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .contact-arrow {
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+        
+        /* 故障排除 */
+        .troubleshoot-item {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .troubleshoot-item:last-child {
+            border-bottom: none;
+        }
+        
+        .troubleshoot-problem {
+            font-size: 15px;
+            font-weight: 600;
+            color: #FF3B30;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .troubleshoot-solution {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding-left: 22px;
+        }
+        
+        .troubleshoot-solution li {
+            margin-bottom: 4px;
+        }
+        
+        /* 版本信息 */
+        .version-item {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .version-item:last-child {
+            border-bottom: none;
+        }
+        
+        .version-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .version-number {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .version-date {
+            font-size: 12px;
+            color: var(--text-tertiary);
+        }
+        
+        .version-badge {
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+            background: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 8px;
+        }
+        
+        .version-changes {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .version-changes li {
+            margin-bottom: 4px;
+        }
+        
+        /* 图标颜色 */
+        .icon-blue { background: rgba(0, 122, 255, 0.12); color: #007AFF; }
+        .icon-green { background: rgba(52, 199, 89, 0.12); color: #34C759; }
+        .icon-orange { background: rgba(255, 149, 0, 0.12); color: #FF9500; }
+        .icon-purple { background: rgba(175, 82, 222, 0.12); color: #AF52DE; }
+        .icon-red { background: rgba(255, 59, 48, 0.12); color: #FF3B30; }
+        .icon-cyan { background: rgba(50, 173, 230, 0.12); color: #32ADE6; }
+        .icon-pink { background: rgba(255, 45, 85, 0.12); color: #FF2D55; }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 24px 16px;
+            color: var(--text-tertiary);
+            font-size: 12px;
+        }
+        
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="app-icon">🥬</div>
+        <h1>FreshDay 技术支持</h1>
+        <p class="subtitle">食品保质期管理助手</p>
+    </div>
+    
+    <!-- 常见问题 FAQ -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon icon-blue">❓</div>
+            <span class="section-title">常见问题</span>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>如何添加食品记录？</span>
+                <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    点击底部 Tab 栏中间的「+」按钮，可以选择：<br>
+                    • 手动输入食品信息<br>
+                    • 扫描条形码自动识别<br>
+                    • 拍照识别生产日期<br><br>
+                    填写完成后点击「保存」即可。
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>数据会自动同步吗？</span>
+                <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    是的，登录 Apple ID 后，数据会自动通过 iCloud 同步到您的所有设备。请确保：<br>
+                    • 已登录 Apple ID<br>
+                    • 已开启 iCloud 同步<br>
+                    • 设备已连接网络
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>免费版和会员版有什么区别？</span>
+                <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    <strong>免费版：</strong><br>
+                    • 最多 50 条食品记录<br>
+                    • 每月 10 次条码扫描<br>
+                    • 3 个自定义分类<br>
+                    • 1 份云端备份<br><br>
+                    <strong>会员版：</strong><br>
+                    • 无限食品记录<br>
+                    • 每月 100 次条码扫描<br>
+                    • 无限自定义分类<br>
+                    • 20 份云端备份<br>
+                    • Excel/PDF 导出
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>如何恢复已购买的会员？</span>
+                <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    进入「我的」→「会员」页面，点击「已购买？点击恢复」按钮。请确保使用购买时相同的 Apple ID 登录。
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+                <span>如何设置过期提醒？</span>
+                <span class="faq-arrow">›</span>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    进入「我的」→「提醒设置」，可以设置：<br>
+                    • 提前提醒天数（1-30天）<br>
+                    • 提醒时间<br>
+                    • 是否开启通知<br><br>
+                    请确保已授权 App 发送通知权限。
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 功能指南 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon icon-green">📖</div>
+            <span class="section-title">功能指南</span>
+        </div>
+        
+        <div class="guide-item">
+            <div class="guide-title"><span class="emoji">📷</span> 条码扫描</div>
+            <div class="guide-desc">扫描食品包装上的条形码，自动识别商品名称和保质期信息，快速录入。</div>
+        </div>
+        
+        <div class="guide-item">
+            <div class="guide-title"><span class="emoji">🔍</span> OCR 日期识别</div>
+            <div class="guide-desc">拍摄食品包装上的生产日期，自动识别并填入，支持多种日期格式。</div>
+        </div>
+        
+        <div class="guide-item">
+            <div class="guide-title"><span class="emoji">🏷️</span> 分类管理</div>
+            <div class="guide-desc">支持食品、饮料、日用品等多种分类，还可以创建自定义分类。</div>
+        </div>
+        
+        <div class="guide-item">
+            <div class="guide-title"><span class="emoji">📊</span> 统计分析</div>
+            <div class="guide-desc">查看食品消耗统计、过期趋势、分类分布等数据，帮助您更好地管理。</div>
+        </div>
+        
+        <div class="guide-item">
+            <div class="guide-title"><span class="emoji">☁️</span> 云端备份</div>
+            <div class="guide-desc">数据自动备份到 iCloud，支持手动创建备份和恢复历史版本。</div>
+        </div>
+        
+        <div class="guide-item">
+            <div class="guide-title"><span class="emoji">📤</span> 数据导出</div>
+            <div class="guide-desc">支持导出为 JSON、CSV 格式，会员可导出 Excel 和 PDF 格式。</div>
+        </div>
+    </div>
+    
+    <!-- 故障排除 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon icon-orange">🔧</div>
+            <span class="section-title">故障排除</span>
+        </div>
+        
+        <div class="troubleshoot-item">
+            <div class="troubleshoot-problem">⚠️ 条码扫描无法识别</div>
+            <ul class="troubleshoot-solution">
+                <li>确保光线充足，条码清晰可见</li>
+                <li>将条码对准扫描框中央</li>
+                <li>尝试调整手机与条码的距离</li>
+                <li>部分商品可能未收录，可手动输入</li>
+            </ul>
+        </div>
+        
+        <div class="troubleshoot-item">
+            <div class="troubleshoot-problem">⚠️ 数据未同步到其他设备</div>
+            <ul class="troubleshoot-solution">
+                <li>确认所有设备使用相同 Apple ID</li>
+                <li>检查 iCloud 是否已开启</li>
+                <li>确保设备已连接网络</li>
+                <li>尝试在设置中手动触发同步</li>
+            </ul>
+        </div>
+        
+        <div class="troubleshoot-item">
+            <div class="troubleshoot-problem">⚠️ 收不到过期提醒通知</div>
+            <ul class="troubleshoot-solution">
+                <li>检查系统设置中是否允许 App 发送通知</li>
+                <li>确认 App 内提醒功能已开启</li>
+                <li>检查是否开启了勿扰模式</li>
+            </ul>
+        </div>
+        
+        <div class="troubleshoot-item">
+            <div class="troubleshoot-problem">⚠️ 会员购买后未生效</div>
+            <ul class="troubleshoot-solution">
+                <li>尝试点击「恢复购买」按钮</li>
+                <li>确认使用购买时的 Apple ID</li>
+                <li>重启 App 后再试</li>
+                <li>如仍有问题，请联系我们</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 联系我们 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon icon-purple">💬</div>
+            <span class="section-title">联系我们</span>
+        </div>
+        
+        <a class="contact-item" href="mailto:lurencha_developer@163.com">
+            <div class="contact-icon icon-blue">✉️</div>
+            <div class="contact-info">
+                <div class="contact-label">邮件反馈</div>
+                <div class="contact-value">lurencha_developer@163.com</div>
+            </div>
+            <span class="contact-arrow">›</span>
+        </a>
+        
+        <a class="contact-item" href="https://github.com/Lurencha-maker/freshday-legal/issues" target="_blank">
+            <div class="contact-icon icon-cyan">💡</div>
+            <div class="contact-info">
+                <div class="contact-label">功能建议</div>
+                <div class="contact-value">在 GitHub 提交 Issue</div>
+            </div>
+            <span class="contact-arrow">›</span>
+        </a>
+    </div>
+    
+    <!-- 版本更新 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon icon-pink">📱</div>
+            <span class="section-title">版本更新</span>
+        </div>
+        
+        <div class="version-item">
+            <div class="version-header">
+                <div>
+                    <span class="version-number">v1.0.0</span>
+                    <span class="version-badge">最新</span>
+                </div>
+                <span class="version-date">2026年1月</span>
+            </div>
+            <ul class="version-changes">
+                <li>🎉 首次发布</li>
+                <li>支持食品保质期记录和管理</li>
+                <li>条码扫描自动识别商品</li>
+                <li>OCR 日期识别</li>
+                <li>过期提醒通知</li>
+                <li>iCloud 数据同步</li>
+                <li>统计分析功能</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>FreshDay © 2026</p>
+        <p style="margin-top: 8px;">
+            <a href="privacy.html">隐私政策</a> · <a href="terms.html">用户协议</a>
+        </p>
+    </div>
+    
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // 关闭所有其他 FAQ
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // 切换当前 FAQ
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
