@@ -13,7 +13,7 @@
             --card-background: #FFFFFF;
             --warning-color: #FF9500;
         }
-        
+
         @media (prefers-color-scheme: dark) {
             :root {
                 --text-primary: #FFFFFF;
@@ -22,13 +22,13 @@
                 --card-background: #1C1C1E;
             }
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
             background-color: var(--background);
@@ -37,36 +37,36 @@
             padding: 16px;
             padding-bottom: 50px;
         }
-        
+
         .header {
             margin-bottom: 24px;
         }
-        
+
         h1 {
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 8px;
         }
-        
+
         .update-date {
             font-size: 13px;
             color: var(--text-secondary);
         }
-        
+
         .section {
             background: var(--card-background);
             border-radius: 12px;
             padding: 16px;
             margin-bottom: 16px;
         }
-        
+
         .section-title {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-bottom: 12px;
         }
-        
+
         .section-icon {
             width: 28px;
             height: 28px;
@@ -76,29 +76,29 @@
             justify-content: center;
             font-size: 14px;
         }
-        
+
         .section-title h2 {
             font-size: 17px;
             font-weight: 600;
         }
-        
+
         .section-content {
             font-size: 15px;
             color: var(--text-secondary);
         }
-        
+
         .section-content p {
             margin-bottom: 12px;
         }
-        
+
         .section-content ul {
             padding-left: 20px;
         }
-        
+
         .section-content li {
             margin-bottom: 6px;
         }
-        
+
         .warning-box {
             background: rgba(255, 149, 0, 0.1);
             border-left: 3px solid var(--warning-color);
@@ -106,13 +106,27 @@
             border-radius: 0 8px 8px 0;
             margin-top: 12px;
         }
-        
+
         .warning-title {
             font-weight: 600;
             color: var(--warning-color);
             margin-bottom: 4px;
         }
-        
+
+        .info-box {
+            background: rgba(0, 122, 255, 0.1);
+            border-left: 3px solid #007AFF;
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 12px;
+        }
+
+        .info-title {
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 4px;
+        }
+
         /* Icon colors */
         .icon-green { background: rgba(52, 199, 89, 0.12); color: #34C759; }
         .icon-blue { background: rgba(0, 122, 255, 0.12); color: #007AFF; }
@@ -121,14 +135,15 @@
         .icon-yellow { background: rgba(255, 204, 0, 0.12); color: #FFCC00; }
         .icon-orange { background: rgba(255, 149, 0, 0.12); color: #FF9500; }
         .icon-gray { background: rgba(142, 142, 147, 0.12); color: #8E8E93; }
+        .icon-red { background: rgba(255, 59, 48, 0.12); color: #FF3B30; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>用户协议</h1>
-        <p class="update-date">最后更新：2026年1月6日</p>
+        <p class="update-date">最后更新：2026年1月7日</p>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-green">✓</div>
@@ -138,7 +153,7 @@
             <p>使用 FreshDay（新鲜日）应用即表示您同意遵守本用户协议。如果您不同意本协议的任何条款，请停止使用本应用。</p>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-blue">📱</div>
@@ -154,7 +169,7 @@
             </ul>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-purple">👤</div>
@@ -170,7 +185,7 @@
             </ul>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-cyan">🔒</div>
@@ -186,23 +201,38 @@
             </ul>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-yellow">⭐</div>
             <h2>5. 订阅服务</h2>
         </div>
         <div class="section-content">
-            <p>FreshDay 提供可选的会员订阅服务：</p>
+            <p>FreshDay 提供以下可选的会员订阅服务：</p>
             <ul>
-                <li>订阅通过 Apple App Store 管理</li>
-                <li>订阅费用由 Apple 处理</li>
-                <li>您可以在 App Store 设置中管理或取消订阅</li>
-                <li>取消订阅后，会员权益将在当前周期结束后失效</li>
+                <li><strong>月度会员</strong>：按月订阅</li>
+                <li><strong>年度会员</strong>：按年订阅</li>
+                <li><strong>终身会员</strong>：一次性购买，永久有效</li>
             </ul>
+            <p>具体价格以 App 内显示为准。</p>
+            
+            <p><strong>订阅条款：</strong></p>
+            <ul>
+                <li>付款将在确认购买时从您的 Apple ID 账户扣除</li>
+                <li>月度和年度订阅会自动续订，除非在当前周期结束前至少 24 小时关闭自动续订</li>
+                <li>账户将在当前周期结束前 24 小时内按所选套餐价格扣款续订</li>
+                <li>您可以在购买后前往 iPhone「设置」→「Apple ID」→「订阅」管理或取消订阅</li>
+                <li>取消订阅后，会员权益将在当前已付费周期结束后失效</li>
+                <li>免费试用期（如有）的未使用部分将在购买订阅后作废</li>
+            </ul>
+            
+            <div class="info-box">
+                <p class="info-title">💡 管理订阅</p>
+                <p style="margin-bottom: 0;">您可以随时在 App Store 账户设置中查看、更改或取消订阅。取消订阅不会影响当前周期内的会员权益。</p>
+            </div>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-orange">⚠️</div>
@@ -217,11 +247,11 @@
             </ul>
             <div class="warning-box">
                 <p class="warning-title">⚠️ 重要提示</p>
-                <p>请根据实际情况判断食品是否可食用，不要仅依赖应用提醒。如有疑问，请咨询专业人士或丢弃食品。</p>
+                <p style="margin-bottom: 0;">请根据实际情况判断食品是否可食用，不要仅依赖应用提醒。如有疑问，请咨询专业人士或丢弃食品。</p>
             </div>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-gray">©</div>
@@ -231,11 +261,22 @@
             <p>FreshDay 应用及其所有内容（包括但不限于代码、设计、图标、文字）均受知识产权法保护。未经授权，不得复制、修改或分发。</p>
         </div>
     </div>
-    
+
+    <div class="section">
+        <div class="section-title">
+            <div class="section-icon icon-red">📝</div>
+            <h2>8. 协议变更</h2>
+        </div>
+        <div class="section-content">
+            <p>我们可能会不时更新本用户协议。更新后的协议将在本页面发布，并更新「最后更新」日期。</p>
+            <p>继续使用本应用即表示您接受更新后的协议条款。</p>
+        </div>
+    </div>
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-blue">✉️</div>
-            <h2>8. 联系我们</h2>
+            <h2>9. 联系我们</h2>
         </div>
         <div class="section-content">
             <p>如果您对本协议有任何疑问，请通过以下方式联系我们：</p>
