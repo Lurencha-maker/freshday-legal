@@ -6,20 +6,21 @@
     <title>用户协议 - FreshDay</title>
     <style>
         :root {
-            --primary-color: #34C759;
-            --text-primary: #1C1C1E;
-            --text-secondary: #8E8E93;
-            --background: #F2F2F7;
-            --card-background: #FFFFFF;
-            --warning-color: #FF9500;
+            --primary-color: #34c759;
+            --text-primary: #1c1c1e;
+            --text-secondary: #8e8e93;
+            --background: #f2f2f7;
+            --card-background: #ffffff;
+            --warning-color: #ff9500;
+            --link-color: #007aff;
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --text-primary: #FFFFFF;
-                --text-secondary: #8E8E93;
+                --text-primary: #ffffff;
+                --text-secondary: #8e8e93;
                 --background: #000000;
-                --card-background: #1C1C1E;
+                --card-background: #1c1c1e;
             }
         }
 
@@ -30,12 +31,16 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
             background-color: var(--background);
             color: var(--text-primary);
             line-height: 1.6;
             padding: 16px;
             padding-bottom: 50px;
+        }
+
+        a {
+            color: var(--link-color);
         }
 
         .header {
@@ -115,7 +120,7 @@
 
         .info-box {
             background: rgba(0, 122, 255, 0.1);
-            border-left: 3px solid #007AFF;
+            border-left: 3px solid #007aff;
             padding: 12px;
             border-radius: 0 8px 8px 0;
             margin-top: 12px;
@@ -123,25 +128,24 @@
 
         .info-title {
             font-weight: 600;
-            color: #007AFF;
+            color: #007aff;
             margin-bottom: 4px;
         }
 
-        /* Icon colors */
-        .icon-green { background: rgba(52, 199, 89, 0.12); color: #34C759; }
-        .icon-blue { background: rgba(0, 122, 255, 0.12); color: #007AFF; }
-        .icon-purple { background: rgba(175, 82, 222, 0.12); color: #AF52DE; }
-        .icon-cyan { background: rgba(50, 173, 230, 0.12); color: #32ADE6; }
-        .icon-yellow { background: rgba(255, 204, 0, 0.12); color: #FFCC00; }
-        .icon-orange { background: rgba(255, 149, 0, 0.12); color: #FF9500; }
-        .icon-gray { background: rgba(142, 142, 147, 0.12); color: #8E8E93; }
-        .icon-red { background: rgba(255, 59, 48, 0.12); color: #FF3B30; }
+        .icon-green { background: rgba(52, 199, 89, 0.12); color: #34c759; }
+        .icon-blue { background: rgba(0, 122, 255, 0.12); color: #007aff; }
+        .icon-purple { background: rgba(175, 82, 222, 0.12); color: #af52de; }
+        .icon-cyan { background: rgba(50, 173, 230, 0.12); color: #32ade6; }
+        .icon-yellow { background: rgba(255, 204, 0, 0.12); color: #ffcc00; }
+        .icon-orange { background: rgba(255, 149, 0, 0.12); color: #ff9500; }
+        .icon-gray { background: rgba(142, 142, 147, 0.12); color: #8e8e93; }
+        .icon-red { background: rgba(255, 59, 48, 0.12); color: #ff3b30; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>用户协议</h1>
-        <p class="update-date">最后更新：2026年1月7日</p>
+        <p class="update-date">最后更新：2026年3月19日</p>
     </div>
 
     <div class="section">
@@ -150,7 +154,7 @@
             <h2>1. 接受条款</h2>
         </div>
         <div class="section-content">
-            <p>使用 FreshDay（新鲜日）应用即表示您同意遵守本用户协议。如果您不同意本协议的任何条款，请停止使用本应用。</p>
+            <p>欢迎使用 FreshDay（新鲜日）。当您下载、安装或使用本应用时，即表示您已阅读、理解并同意接受本协议的约束。如果您不同意本协议的任何内容，请停止使用本应用。</p>
         </div>
     </div>
 
@@ -160,76 +164,61 @@
             <h2>2. 服务描述</h2>
         </div>
         <div class="section-content">
-            <p>FreshDay 是一个食品保质期管理应用，帮助您：</p>
+            <p>FreshDay 是一款食品保质期管理工具，主要功能包括：</p>
             <ul>
                 <li>记录和管理食品信息</li>
-                <li>跟踪食品保质期</li>
-                <li>接收过期提醒通知</li>
-                <li>查看消费记录和统计</li>
+                <li>通过拍照识别或手动方式录入日期信息</li>
+                <li>接收本地过期提醒通知</li>
+                <li>查看分类、消耗记录和统计信息</li>
+                <li>使用 iCloud 进行备份与恢复</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">
-            <div class="section-icon icon-purple">👤</div>
-            <h2>3. 用户责任</h2>
+            <div class="section-icon icon-purple">💳</div>
+            <h2>3. 购买与使用</h2>
+        </div>
+        <div class="section-content">
+            <p>FreshDay 当前采用付费下载安装后直接使用的模式。您在 App Store 完成下载后，即可使用应用当前提供的全部核心功能。</p>
+            <div class="info-box">
+                <p class="info-title">说明</p>
+                <p style="margin-bottom: 0;">当前版本不提供应用内会员、订阅、恢复购买或 Apple 登录功能。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <div class="section-icon icon-cyan">👤</div>
+            <h2>4. 用户责任</h2>
         </div>
         <div class="section-content">
             <p>使用本应用时，您同意：</p>
             <ul>
-                <li>提供准确、真实的信息</li>
-                <li>妥善保管您的账号信息</li>
-                <li>不将应用用于任何非法目的</li>
-                <li>不干扰或破坏应用的正常运行</li>
+                <li>录入和管理的信息应尽量准确、真实</li>
+                <li>合理设置提醒时间，并结合实际情况判断食品状态</li>
+                <li>不将本应用用于任何违法违规用途</li>
+                <li>不以任何方式干扰或破坏本应用的正常运行</li>
+                <li>自行妥善保管设备、系统权限及 iCloud 设置</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">
-            <div class="section-icon icon-cyan">🔒</div>
-            <h2>4. 数据安全</h2>
+            <div class="section-icon icon-yellow">☁️</div>
+            <h2>5. 数据与备份</h2>
         </div>
         <div class="section-content">
-            <p>FreshDay 将您的数据存储在设备本地，我们不会收集或传输您的数据到外部服务器。</p>
+            <p>FreshDay 的数据主要存储在您的设备本地。若您主动使用 iCloud 备份与恢复功能，相关备份数据将存储在您的 iCloud 私有空间中。</p>
             <p><strong>您有责任：</strong></p>
             <ul>
-                <li>定期备份您的数据</li>
-                <li>保护您的设备安全</li>
-                <li>妥善保管您的 Apple ID 信息</li>
+                <li>根据需要定期执行备份</li>
+                <li>确保设备系统层面的 iCloud 已正常启用</li>
+                <li>在更换设备或重装应用前确认备份状态</li>
             </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">
-            <div class="section-icon icon-yellow">⭐</div>
-            <h2>5. 订阅服务</h2>
-        </div>
-        <div class="section-content">
-            <p>FreshDay 提供以下可选的会员订阅服务：</p>
-            <ul>
-                <li><strong>月度会员</strong>：按月订阅</li>
-                <li><strong>年度会员</strong>：按年订阅</li>
-                <li><strong>终身会员</strong>：一次性购买，永久有效</li>
-            </ul>
-            <p>具体价格以 App 内显示为准。</p>
-            
-            <p><strong>订阅条款：</strong></p>
-            <ul>
-                <li>付款将在确认购买时从您的 Apple ID 账户扣除</li>
-                <li>月度和年度订阅会自动续订，除非在当前周期结束前至少 24 小时关闭自动续订</li>
-                <li>账户将在当前周期结束前 24 小时内按所选套餐价格扣款续订</li>
-                <li>您可以在购买后前往 iPhone「设置」→「Apple ID」→「订阅」管理或取消订阅</li>
-                <li>取消订阅后，会员权益将在当前已付费周期结束后失效</li>
-                <li>免费试用期（如有）的未使用部分将在购买订阅后作废</li>
-            </ul>
-            
-            <div class="info-box">
-                <p class="info-title">💡 管理订阅</p>
-                <p style="margin-bottom: 0;">您可以随时在 App Store 账户设置中查看、更改或取消订阅。取消订阅不会影响当前周期内的会员权益。</p>
-            </div>
         </div>
     </div>
 
@@ -239,15 +228,16 @@
             <h2>6. 免责声明</h2>
         </div>
         <div class="section-content">
-            <p>FreshDay 仅提供信息管理工具，不对以下情况负责：</p>
+            <p>FreshDay 仅提供信息记录、整理与提醒能力，不构成食品安全建议，也不对以下情况承担责任：</p>
             <ul>
-                <li>因食品过期导致的任何健康问题</li>
-                <li>因数据丢失导致的任何损失</li>
-                <li>因设备故障导致的数据丢失</li>
+                <li>因食品过期、变质或误食导致的任何健康问题</li>
+                <li>因用户录入错误、未及时处理提醒导致的损失</li>
+                <li>因设备故障、系统限制、iCloud 状态异常等原因造成的数据丢失或备份失败</li>
+                <li>因不可抗力、第三方平台服务异常造成的使用中断</li>
             </ul>
             <div class="warning-box">
-                <p class="warning-title">⚠️ 重要提示</p>
-                <p style="margin-bottom: 0;">请根据实际情况判断食品是否可食用，不要仅依赖应用提醒。如有疑问，请咨询专业人士或丢弃食品。</p>
+                <p class="warning-title">重要提示</p>
+                <p style="margin-bottom: 0;">请结合食品外观、气味、保存条件和专业建议综合判断是否可食用，不要仅依赖应用提醒结果。</p>
             </div>
         </div>
     </div>
@@ -258,7 +248,7 @@
             <h2>7. 知识产权</h2>
         </div>
         <div class="section-content">
-            <p>FreshDay 应用及其所有内容（包括但不限于代码、设计、图标、文字）均受知识产权法保护。未经授权，不得复制、修改或分发。</p>
+            <p>FreshDay 应用及其相关内容，包括但不限于代码、界面设计、图标、文案和商标，均受相关法律保护。未经授权，任何人不得复制、修改、传播或用于商业用途。</p>
         </div>
     </div>
 
@@ -268,8 +258,8 @@
             <h2>8. 协议变更</h2>
         </div>
         <div class="section-content">
-            <p>我们可能会不时更新本用户协议。更新后的协议将在本页面发布，并更新「最后更新」日期。</p>
-            <p>继续使用本应用即表示您接受更新后的协议条款。</p>
+            <p>我们可能根据产品功能调整、法律法规要求或运营需要更新本协议。更新后的协议将在本页面发布，并同步更新“最后更新”日期。</p>
+            <p>在协议更新后继续使用本应用，即视为您已接受更新后的内容。</p>
         </div>
     </div>
 
@@ -279,11 +269,11 @@
             <h2>9. 联系我们</h2>
         </div>
         <div class="section-content">
-            <p>如果您对本协议有任何疑问，请通过以下方式联系我们：</p>
+            <p>如果您对本协议有任何疑问，可通过以下方式联系我们：</p>
             <ul>
                 <li>邮箱：<a href="mailto:lurencha_developer@163.com">lurencha_developer@163.com</a></li>
                 <li>App Store 应用页面留言</li>
-                <li>应用内「意见反馈」功能</li>
+                <li>应用内“意见反馈”功能</li>
             </ul>
         </div>
     </div>

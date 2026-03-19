@@ -6,66 +6,71 @@
     <title>隐私政策 - FreshDay</title>
     <style>
         :root {
-            --primary-color: #34C759;
-            --text-primary: #1C1C1E;
-            --text-secondary: #8E8E93;
-            --background: #F2F2F7;
-            --card-background: #FFFFFF;
+            --primary-color: #34c759;
+            --text-primary: #1c1c1e;
+            --text-secondary: #8e8e93;
+            --background: #f2f2f7;
+            --card-background: #ffffff;
+            --link-color: #007aff;
         }
-        
+
         @media (prefers-color-scheme: dark) {
             :root {
-                --text-primary: #FFFFFF;
-                --text-secondary: #8E8E93;
+                --text-primary: #ffffff;
+                --text-secondary: #8e8e93;
                 --background: #000000;
-                --card-background: #1C1C1E;
+                --card-background: #1c1c1e;
             }
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
             background-color: var(--background);
             color: var(--text-primary);
             line-height: 1.6;
             padding: 16px;
             padding-bottom: 50px;
         }
-        
+
+        a {
+            color: var(--link-color);
+        }
+
         .header {
             margin-bottom: 24px;
         }
-        
+
         h1 {
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 8px;
         }
-        
+
         .update-date {
             font-size: 13px;
             color: var(--text-secondary);
         }
-        
+
         .section {
             background: var(--card-background);
             border-radius: 12px;
             padding: 16px;
             margin-bottom: 16px;
         }
-        
+
         .section-title {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-bottom: 12px;
         }
-        
+
         .section-icon {
             width: 28px;
             height: 28px;
@@ -75,170 +80,174 @@
             justify-content: center;
             font-size: 14px;
         }
-        
+
         .section-title h2 {
             font-size: 17px;
             font-weight: 600;
         }
-        
+
         .section-content {
             font-size: 15px;
             color: var(--text-secondary);
         }
-        
+
         .section-content p {
             margin-bottom: 12px;
         }
-        
+
         .section-content ul {
             padding-left: 20px;
         }
-        
+
         .section-content li {
             margin-bottom: 6px;
         }
-        
+
         .highlight {
             background: rgba(52, 199, 89, 0.1);
             padding: 12px;
             border-radius: 8px;
             margin-top: 12px;
         }
-        
+
         .highlight-title {
             font-weight: 600;
             color: var(--primary-color);
             margin-bottom: 4px;
         }
-        
-        /* Icon colors */
-        .icon-blue { background: rgba(0, 122, 255, 0.12); color: #007AFF; }
-        .icon-green { background: rgba(52, 199, 89, 0.12); color: #34C759; }
-        .icon-cyan { background: rgba(50, 173, 230, 0.12); color: #32ADE6; }
-        .icon-purple { background: rgba(175, 82, 222, 0.12); color: #AF52DE; }
-        .icon-red { background: rgba(255, 59, 48, 0.12); color: #FF3B30; }
-        .icon-orange { background: rgba(255, 149, 0, 0.12); color: #FF9500; }
-        .icon-yellow { background: rgba(255, 204, 0, 0.12); color: #FFCC00; }
+
+        .icon-blue { background: rgba(0, 122, 255, 0.12); color: #007aff; }
+        .icon-green { background: rgba(52, 199, 89, 0.12); color: #34c759; }
+        .icon-cyan { background: rgba(50, 173, 230, 0.12); color: #32ade6; }
+        .icon-purple { background: rgba(175, 82, 222, 0.12); color: #af52de; }
+        .icon-red { background: rgba(255, 59, 48, 0.12); color: #ff3b30; }
+        .icon-orange { background: rgba(255, 149, 0, 0.12); color: #ff9500; }
+        .icon-yellow { background: rgba(255, 204, 0, 0.12); color: #ffcc00; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>隐私政策</h1>
-        <p class="update-date">最后更新：2026年1月6日</p>
+        <p class="update-date">最后更新：2026年3月19日</p>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-blue">🛡️</div>
-            <h2>1. 数据收集</h2>
+            <h2>1. 我们如何处理您的数据</h2>
         </div>
         <div class="section-content">
-            <p>FreshDay（新鲜日）致力于保护您的隐私。我们不会收集、存储或传输您的任何个人数据到外部服务器。</p>
-            <p><strong>应用的所有数据都存储在您的设备本地，包括：</strong></p>
-            <ul>
-                <li>食品记录信息（名称、分类、保质期等）</li>
-                <li>消费记录</li>
-                <li>自定义分类</li>
-                <li>用户设置和偏好</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="section-title">
-            <div class="section-icon icon-green">💾</div>
-            <h2>2. 数据存储</h2>
-        </div>
-        <div class="section-content">
-            <p>所有数据都存储在您的设备本地，使用 iOS 系统的 SwiftData 框架进行本地数据库存储。</p>
-            <p><strong>数据安全：</strong></p>
-            <ul>
-                <li>数据存储在应用沙盒中，其他应用无法访问</li>
-                <li>数据不会上传到任何外部服务器</li>
-                <li>您可以随时删除应用来清除所有数据</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="section-title">
-            <div class="section-icon icon-cyan">☁️</div>
-            <h2>3. iCloud 同步</h2>
-        </div>
-        <div class="section-content">
-            <p>FreshDay 使用 iCloud 提供数据同步和备份功能：</p>
-            <ul>
-                <li>数据存储在您的 iCloud 私有数据库中，仅您本人可访问</li>
-                <li>支持多设备数据同步（需登录同一 Apple ID）</li>
-                <li>备份数据不会与 Apple 或其他第三方共享</li>
-                <li>您可以在应用内管理和删除备份数据</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="section-title">
-            <div class="section-icon icon-yellow">📊</div>
-            <h2>4. 条码查询服务</h2>
-        </div>
-        <div class="section-content">
-            <p>FreshDay 使用第三方数据服务查询商品信息，以便快速录入食品记录。</p>
-            <p><strong>当您扫描条码时：</strong></p>
-            <ul>
-                <li>仅发送条码号码用于查询商品名称和保质期信息</li>
-                <li>不会发送您的个人信息、设备标识或位置信息</li>
-                <li>查询结果仅在本地使用和缓存，不会上传到我们的服务器</li>
-                <li>条码查询记录不会与您的身份关联</li>
-            </ul>
+            <p>FreshDay（新鲜日）重视您的隐私。我们不建立应用内账号体系，不收集、出售或向外部服务器传输可识别您身份的个人信息。</p>
             <div class="highlight">
-                <div class="highlight-title">🔒 隐私保护</div>
-                <p style="margin-bottom: 0;">条码扫描功能完全匿名，第三方服务仅接收条码数字，无法识别您的身份。</p>
+                <p class="highlight-title">核心原则</p>
+                <p style="margin-bottom: 0;">您的食品记录、分类、提醒与统计数据主要保存在您的设备本地；只有在您主动使用 iCloud 备份与恢复功能时，相关备份数据才会写入您的 iCloud 私有空间。</p>
             </div>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
-            <div class="section-icon icon-purple">🔗</div>
-            <h2>5. 其他第三方服务</h2>
+            <div class="section-icon icon-green">📦</div>
+            <h2>2. 本地存储的数据类型</h2>
         </div>
         <div class="section-content">
-            <p>FreshDay 不使用任何第三方分析服务、广告服务或用户追踪服务。</p>
-            <p><strong>我们使用的 Apple 服务：</strong></p>
+            <p>为了提供食品保质期管理功能，应用会在本地保存以下信息：</p>
             <ul>
-                <li>Apple ID 登录：用于身份验证</li>
-                <li>iCloud：用于数据同步和备份（使用 CloudKit 私有数据库）</li>
-                <li>StoreKit：用于应用内购买</li>
+                <li>食品记录信息，例如名称、数量、分类、生产日期、保质期、过期时间和存放位置</li>
+                <li>消费记录和过期处理记录</li>
+                <li>您创建的自定义分类</li>
+                <li>提醒设置、筛选偏好及其他应用配置</li>
+                <li>您主动添加的食品图片</li>
             </ul>
         </div>
     </div>
-    
+
+    <div class="section">
+        <div class="section-title">
+            <div class="section-icon icon-cyan">🔐</div>
+            <h2>3. 可能使用到的系统权限</h2>
+        </div>
+        <div class="section-content">
+            <p>FreshDay 仅在对应功能需要时请求系统权限：</p>
+            <ul>
+                <li>通知权限：用于发送即将过期或已过期的本地提醒通知</li>
+                <li>相机权限：用于拍摄食品照片或拍摄包装日期信息</li>
+                <li>相册权限：用于从相册选择食品图片</li>
+                <li>iCloud 权限：用于备份与恢复您主动选择同步的应用数据</li>
+            </ul>
+            <p>如果您拒绝某项权限，对应功能可能无法使用，但不会影响其他本地功能的正常使用。</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <div class="section-icon icon-purple">☁️</div>
+            <h2>4. iCloud 备份与恢复</h2>
+        </div>
+        <div class="section-content">
+            <p>当您主动使用 iCloud 备份与恢复功能时，应用会将备份数据写入您的 iCloud 私有空间。该数据仅与您自己的 iCloud 账户关联。</p>
+            <ul>
+                <li>备份数据默认不会向其他用户公开</li>
+                <li>我们不会读取、出售或与第三方共享您的备份内容</li>
+                <li>在同一 iCloud 账户下，您可以在兼容设备之间恢复备份数据</li>
+                <li>备份与恢复是否可用，取决于您的系统 iCloud 状态、可用空间和 Apple 服务状态</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <div class="section-icon icon-yellow">🧠</div>
+            <h2>5. 本地处理与第三方服务</h2>
+        </div>
+        <div class="section-content">
+            <p>FreshDay 不使用广告 SDK，不接入第三方统计分析服务，也不进行用户追踪。</p>
+            <p>应用当前主要依赖以下 Apple 系统服务：</p>
+            <ul>
+                <li>本地通知：用于提醒您关注临期或过期食品</li>
+                <li>相机与相册：用于图片采集和选择</li>
+                <li>iCloud：用于备份与恢复</li>
+            </ul>
+            <p>与食品日期识别相关的处理仅用于实现应用功能，不用于建立用户画像或投放广告。</p>
+        </div>
+    </div>
+
     <div class="section">
         <div class="section-title">
             <div class="section-icon icon-red">🗑️</div>
-            <h2>6. 数据删除</h2>
+            <h2>6. 数据删除与管理</h2>
         </div>
         <div class="section-content">
-            <p>您可以随时删除应用数据：</p>
+            <p>您可以随时管理或删除自己的数据：</p>
             <ul>
-                <li>在应用内注销账号：删除所有本地数据</li>
-                <li>删除应用：卸载应用将删除所有本地数据</li>
-                <li>iCloud 备份数据可在应用内「备份/恢复」页面管理</li>
+                <li>删除应用：会移除设备中的本地数据</li>
+                <li>删除单条记录：可在应用内自行处理食品、分类与历史记录</li>
+                <li>iCloud 备份：可在应用内或系统的 iCloud 管理中删除相关备份数据</li>
             </ul>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="section-title">
-            <div class="section-icon icon-orange">✉️</div>
-            <h2>7. 联系我们</h2>
+            <div class="section-icon icon-orange">📝</div>
+            <h2>7. 政策更新</h2>
+        </div>
+        <div class="section-content">
+            <p>当产品功能、法律法规或运营方式发生变化时，我们可能会更新本隐私政策。更新后的版本会在本页面发布，并同步更新“最后更新”日期。</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <div class="section-icon icon-blue">✉️</div>
+            <h2>8. 联系我们</h2>
         </div>
         <div class="section-content">
             <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
             <ul>
                 <li>邮箱：<a href="mailto:lurencha_developer@163.com">lurencha_developer@163.com</a></li>
                 <li>App Store 应用页面留言</li>
-                <li>应用内「意见反馈」功能</li>
+                <li>应用内“意见反馈”功能</li>
             </ul>
         </div>
     </div>
